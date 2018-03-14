@@ -286,9 +286,6 @@ open class ButtonBarPagerTabStripViewController: PagerTabStripViewController, Pa
     open func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard indexPath.item != currentIndex else { return }
 
-        buttonBarView.moveTo(index: indexPath.item, animated: true, swipeDirection: .none, pagerScroll: .yes)
-        shouldUpdateButtonBarView = false
-
         let oldIndexPath = IndexPath(item: currentIndex, section: 0)
         let newIndexPath = IndexPath(item: indexPath.item, section: 0)
 
